@@ -40,7 +40,7 @@ body {
 }
 .cart-badge {
     position: absolute;
-    top: 35px;
+    top: 38px;
     right: 35px;
     color: white;
     font-size: 18px;
@@ -111,17 +111,23 @@ body {
 }
 
 .product-button {
-    background-color: #e74c3c;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    margin-top: 10px;
+    background-color: #e74c3c; /* Red background */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease-in-out; /* Smooth background transition */
+    margin-top: 10px; /* Top margin */
 }
 
 .product-button:hover {
-    background-color: #c0392b;
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+.product-button:disabled {
+    background-color: grey; /* Grey background when disabled */
+    color: #d3d3d3; /* Light grey text */
+    cursor: not-allowed; /* Not allowed cursor */
 }
 
 /* Pseudo-elements - Sale badge */
