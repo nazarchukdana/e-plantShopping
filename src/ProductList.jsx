@@ -304,7 +304,9 @@ const handlePlantsClick = (e) => {
                                         <div className="product-title">{plant.name}</div>
                                         <div className="product-cost">${plant.cost}</div>
                                         <div className="product-description">{plant.description}</div>
-                                        <button className="product-button" onClick={() => handleAddToCart(plant)}>Add To Cart</button>
+                                        <button className="product-button" onClick={() => handleAddToCart(plant)} disabled={addedToCart[plant.name]}>
+                                        {addedToCart[plant.name] ? 'Added to Cart' : 'Add to Cart'}
+                                        </button>
                                     </div>
                                 ))}
                             </div>
@@ -313,7 +315,7 @@ const handlePlantsClick = (e) => {
 
                 </div>
             ) :  (
-                <CartItem onContinueShopping={handleContinueShopping}/>
+                <CartItem onContinueShopping={handleContinueShopping} onRemoveItem={handleRemoveFromCart}/>
             )}
         </div>
     );
