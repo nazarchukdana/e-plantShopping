@@ -38,6 +38,19 @@ body {
     text-decoration: none;
    
 }
+.cart-badge {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    color: white;
+    font-size: 18px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* Product Grid */
 .product-grid {
