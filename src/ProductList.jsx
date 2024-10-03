@@ -244,6 +244,12 @@ function ProductList() {
             [product.name]: true,
         }));
     };
+    const handleRemoveFromCart = (product) => {
+        setAddedToCart((prevState) => ({
+            ...prevState,
+            [product.name]: false, // Re-enable the Add to Cart button for this product
+        }));
+    };
     const handleCartClick = (e) => {
         e.preventDefault();
         setShowCart(true); // Set showCart to true when cart icon is clicked
